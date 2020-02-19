@@ -1,0 +1,30 @@
+{% extends "awards/base.html" %}
+{% load crispy_forms_tags %}
+{% block navbar %}
+    <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+{% endblock %}
+{% block content %}
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Log In</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Log in</button>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Need an account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+            <small>
+                |
+            </small>
+            <small class="text-muted">
+                Forgot your password? <a class="ml-2" href="{% url 'password_reset' %}">Reset</a>
+            </small>
+        </div>
+    </div>
+{% endblock %}

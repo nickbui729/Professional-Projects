@@ -1,0 +1,11 @@
+{% extends "awards/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<h1>{{object.category}}</h1>
+{{object.recipient_fname}} {{object.recipient_lname}} <br/>
+{{object.submitter}}<br/>
+{{object.recipient_email}}<br/>
+{{object.category}}<br/>
+{{object.date_granted}}<br/>
+{{object.region}}<br/>
+{% endblock %}

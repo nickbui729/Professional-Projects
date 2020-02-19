@@ -1,0 +1,11 @@
+{% extends "awards/base.html" %}
+{% load render_table from django_tables2 %}
+{% block content %}
+<h1>My Awards</h1>
+    <a class="btn btn-outline-info" href="{% url 'award-create' %}">New Award</a>
+    <!--<a class="btn btn-primary" href="{% url 'award-create' %}">Delete</a>-->
+    <br/>
+    <br/>
+{% render_table table %}
+
+{% endblock %}

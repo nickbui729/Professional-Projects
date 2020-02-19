@@ -1,0 +1,66 @@
+
+\RequirePackage{luatex85}
+\documentclass[12pt]{scrartcl}
+\usepackage{xcolor}
+\usepackage{niceframe}
+\usepackage{wallpaper}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[letterpaper,landscape,margin=1in,heightrounded]{geometry}
+\usepackage{tikz}
+
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\pagenumbering{gobble}
+
+
+
+\centering
+\scalebox{3}{\color{green!30!black!60}
+\begin{minipage}{.33\textwidth}
+
+{\centering
+
+\textcolor{red!10!black!90}
+{\small Employee Recognition Program}\\
+\textcolor{green!10!black!90}{
+\tiny In honor of outstanding performance and dedication we hereby award the}
+
+\smallskip
+
+\textcolor{red!30!black!90}
+{\textit{Certificate for}}
+
+\vspace{2mm}
+
+\textcolor{black}{\large \textsc {{ category }}}\\
+\textcolor{black}{\small { on {{ awarddate }} }}
+
+\vspace{4mm}
+
+\tiny
+to: \uline{\textcolor{black}
+{ {{- recipientfname -}} { } {{- recipientlname -}} }}
+
+
+\vspace{6mm}
+{\color{blue!40!black}
+\hfill\begin{tabular}{@{}p{.5\linewidth}@{}}
+\multicolumn{1}{c}{ \includegraphics[width=5cm, height=0.5cm]{signature.jpg} } \\
+\hline
+\multicolumn{1}{c}{ {{ submitterfname }} { } {{ submitterlname }} } \\
+\centering
+
+
+\end{tabular}
+
+}}
+\end{minipage}
+
+
+}
+
+\end{document}
